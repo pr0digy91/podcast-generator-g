@@ -9,8 +9,11 @@ RUN apt-get update && apt-get install -y \
 
 # RUN apt-get install -y python3-pyyaml
 
-RUN python3 -m venv /path/to/venv
-RUN /path/to/venv/bin/pip install PyYAML
+# Create a visible virtual environment in /venv
+RUN python3 -m venv /venv
+
+# Install PyYAML in the visible virtual environment
+RUN /venv/bin/pip install PyYAML
 
 COPY feed.py /usr/bin/feed.py
 
