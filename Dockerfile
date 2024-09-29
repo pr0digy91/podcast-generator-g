@@ -5,10 +5,6 @@ RUN apt-get update && apt-get install -y \
     python3-pip \
     git
 
-# RUN pip3 install PyYAML
-
-# RUN apt-get install -y python3-pyyaml
-
 # Install the python3-venv package
 RUN apt-get install -y python3-venv
 
